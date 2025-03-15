@@ -7,3 +7,5 @@
 `mvn clean install`
 ### RUN PROJECT
 - RUN the `PlacementPortalApplication.java` file to run the project
+
+test
