@@ -18,3 +18,5 @@
 - On every new PR and new commit on PR, 2 actions are configured:
 - 1 `maven build`
 - 2 `Git Guardian Security Check`
+
+// test comment
