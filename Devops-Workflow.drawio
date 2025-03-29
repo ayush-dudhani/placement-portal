@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36" version="26.1.3">
+  <diagram name="Page-1" id="7akDCru6AUikrS-1zDzk">
+    <mxGraphModel dx="1050" dy="1691" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8WytswAls56Erwx2s7DI-8" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" parent="1">
+          <mxGeometry x="10" width="755" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8WytswAls56Erwx2s7DI-1" target="8WytswAls56Erwx2s7DI-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-26" value="upload docker file&amp;nbsp;&lt;div&gt;to docker hub&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8WytswAls56Erwx2s7DI-25">
+          <mxGeometry x="-0.4319" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-1" value="Dockerize" style="image;sketch=0;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/mscae/Docker.svg;" vertex="1" parent="1">
+          <mxGeometry x="280.73" y="250" width="50" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8WytswAls56Erwx2s7DI-2" target="8WytswAls56Erwx2s7DI-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-12" value="code push" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8WytswAls56Erwx2s7DI-11">
+          <mxGeometry x="0.0179" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-2" value="Spring Boot Application" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/boxicons-logos/24/bxl-spring-boot-128.png" vertex="1" parent="1">
+          <mxGeometry x="62" y="40" width="60" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8WytswAls56Erwx2s7DI-3" target="8WytswAls56Erwx2s7DI-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-28" value="fetch the from dockerhub&amp;nbsp;&lt;div&gt;new image and&amp;nbsp;&lt;div&gt;run the container on ec2&lt;/div&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8WytswAls56Erwx2s7DI-27">
+          <mxGeometry x="-0.2077" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-3" value="Docker Hub" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/wiring_hub.svg;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="580" y="280" width="73.53" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-29" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8WytswAls56Erwx2s7DI-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="480" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-4" value="EC2 Instance" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.ec2;fillColor=#F58534;gradientColor=none;" vertex="1" parent="1">
+          <mxGeometry x="580" y="70" width="76.5" height="93" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-19" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8WytswAls56Erwx2s7DI-5" target="8WytswAls56Erwx2s7DI-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-5" value="Github" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github" vertex="1" parent="1">
+          <mxGeometry x="179.99999999999997" y="120" width="50" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-7" value="CURRENT DEVOPS FLOW" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="62" y="-40" width="156" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="8WytswAls56Erwx2s7DI-18" target="8WytswAls56Erwx2s7DI-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="425.43499999999995" y="207.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-24" value="if build&amp;nbsp;&lt;div&gt;is success&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="8WytswAls56Erwx2s7DI-23">
+          <mxGeometry x="-0.1499" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-18" value="maven&amp;nbsp;&lt;div&gt;build&lt;/div&gt;" style="whiteSpace=wrap;html=1;verticalAlign=top;dashed=0;" vertex="1" parent="1">
+          <mxGeometry x="270" y="122" width="71.47" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="8WytswAls56Erwx2s7DI-30" value="changes visible on ec2-ip address&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;labelBorderColor=default;" vertex="1" parent="1">
+          <mxGeometry x="380" y="50" width="96" height="80" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
