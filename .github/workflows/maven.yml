@@ -1,4 +1,4 @@
-name: Maven Build & Store JAR
+name: Maven Build
 
 on:
   pull_request:
