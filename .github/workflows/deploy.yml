@@ -1,7 +1,9 @@
 name: Deploy to AWS EC2
 
 on:
-  push:
+  pull_request:
+    types:
+      - closed  # Only trigger on PR merge
     branches:
       - main
 
@@ -10,27 +12,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout Code
         uses: actions/checkout@v3
-        
-      - name: Download Built JAR from Artifact
+      
+      - name: Download Built JAR
         uses: actions/download-artifact@v4
         with:
           name: placement-portal-jar
           path: .
-          
-      - name: Build and Push Docker Image
-        run: |
-          echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
-          docker build -t dudhaniayush/placement-portal-repository:latest .
-          docker push dudhaniayush/placement-portal-repository:latest
 
-      - name: Deploy to EC2
-        uses: appleboy/ssh-action@v0.1.6
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ec2-user
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            cd /home/ec2-user
+      - name: Debug Downloaded Artifacts
+        run: |
+          echo "Listing downloaded files:"
+          ls -lah .
+          
+      - name: Transfer JAR to EC2
+        run: |
+          scp -o StrictHostKeyChecking=no placement-portal-0.0.1-SNAPSHOT.jar ec2-user@${{ secrets.EC2_HOST }}:/home/ec2-user/deployment/
+
+      - name: SSH into EC2 and Deploy
+        run: |
+          ssh -o StrictHostKeyChecking=no ec2-user@${{ secrets.EC2_HOST }} << 'EOF'
+            cd /home/ec2-user/deployment
             ./deploy.sh
+          EOF
+
+      - name: Run Health Check (Ensure Deployment is Successful)
+        run: |
+          curl --fail http://${{ secrets.EC2_HOST }}:8080/actuator/health || exit 1
